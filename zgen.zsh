@@ -84,7 +84,7 @@ fi
         # work well in a filename.
         local location="$(-zgen-encode-url $(dirname ${repo}))"
         repo="${location}/${reponame}"
-        echo "${ZGEN_DIR}/${repo}-${branch}"
+        echo "${ZGEN_DIR}/repos/${repo}-${branch}"
     fi
 }
 
@@ -197,7 +197,7 @@ zgen-reset() {
 }
 
 zgen-update() {
-    for repo in "${ZGEN_DIR}"/*/*; do
+    for repo in "${ZGEN_DIR}"/repos/*/*; do
         echo "Updating ${repo}"
         (cd "${repo}" \
             && git pull \
