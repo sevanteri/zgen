@@ -1,3 +1,9 @@
 init.zsh
 zcompdump
 repos
+*
+!.gitignore
+!LICENSE
+!README.md
+!_zgen
+!zgen.zsh
